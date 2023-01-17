@@ -28,10 +28,12 @@ Before starting your project, you should set up a working environment with all t
 Font developers are expected to understand the following:
 
 -   Shell scripting (usually `bash`).
--   How to manage Python packages/tools using `pip`.
+-   How to manage Python packages/tools using `pip`, and virtual environments.
 -   A basic understanding of the command-line. Users should be able to traverse directories and understand the commands `cd`, `ls`, `mv`, `cp`.
 
 See the useful links section at the bottom of this page to bring you up to speed.
+
+**Note:** If you are not familiar with the concepts listed above, and do not wish to learn about them; we recommend you to try following the [github repository requirements](https://googlefonts.github.io/gf-guide/upstream.html) as close as possible, as well as the [font file requirements](https://googlefonts.github.io/gf-guide/requirements.html), and a GF Team Member will help you with the tooling and building process of your font.
 
 ## Setting up a working environment
 
@@ -85,7 +87,7 @@ brew install python
 
 -   Or you can use the latest release package from [python downloads](https://www.python.org/downloads/). Don’t forget to double click on `Install Certificates.command` and `Update Shell Profile.command` to add the python path to your bash profile.
 
-Installing python usually comes with `pip` (the standard package manager for Python), allowing you to install and uninstall or freeze the packages. If you work on Mac with an Apple M1 chip, you must first upgrade `pip` to the latest version using `pip install -U pip`.
+Installing python usually comes with `pip` (the standard package manager for Python), allowing you to install and uninstall or freeze the packages. If you work on Mac with an Apple M1 chip, you must first upgrade `pip` to the latest version using `pip install --upgrade pip`.
 
 ### Virtual Environments
 
@@ -97,28 +99,28 @@ It is strongly suggested to create and work under a [Python Virtual Environment]
     python3 -m venv myenv
     ```
 
-    The last part of the command is the name you would like to give to the virtual environment. Usually, it is only `venv`, or `env` if you specifically want to differentiate it from the Python Module "venv" name.
+    The last part of the command is the name you would like to give to the virtual environment. Usually, it is only `venv`, or `myenv` if you specifically want to differentiate it from the Python Module "venv" name.
 2.  Once you have created your virtual environment, you need to **activate** it.
 
     On Unix or macOS run:
 
     ``` code
-    source env/bin/activate
+    source myenv/bin/activate
     ```
 
     On Windows:
 
     ``` code
-    env\Scripts\activate.bat
+    myenv\Scripts\activate.bat
     ```
 3.  After you have activated the virtual environment, the command prompt will display the name of the virtual environment that you are using in parentheses:
 
     ``` code
-    (env) userName directoryName $
+    (myenv) userName directoryName $
     ```
-3.  To deactivate the virtual env, just type `deactivate`. Note that closing the Terminal window will also deactivate the environment, and you will have to reactivate it every time you want to work on your project.
+3.  To deactivate the virtual environment, just type `deactivate`. Note that closing the Terminal window will also deactivate the environment, and you will have to reactivate it every time you want to work on your project.
 
-You can install as many venvs as you want; in each project directory or your user home directory if you intend to use the same venv for all your projects. Command-line tools often have settings to run a command automatically when a new window opens; you could activate one venv this way and avoid having to type it every time.
+You can install as many virtual environments as you want; in each project directory or your user home directory if you intend to use the same virtual environment for all your projects. Command-line tools often have settings to run a command automatically when a new window opens; you could activate one virtual environment this way and avoid having to type it every time.
 
 It is *not* recommended to instal virtual environments in clouds, drives, dropbox, etc.
 
@@ -220,7 +222,8 @@ export BSTACK_ACCESS_KEY="key"
 ## Useful Links
 
 -   [Bash shell comands cheat-sheet](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
--   [What is CLI](https://www.w3schools.com/whatis/whatis_cli.asp)
+-   [What is a virtual environment](https://realpython.com/python-virtual-environments-a-primer/)
+-   [What is a CLI](https://www.w3schools.com/whatis/whatis_cli.asp)
 -   [What is shell](https://www.tutorialspoint.com/unix/unix-what-is-shell.htm)
 -   [What is Pip](https://realpython.com/what-is-pip/)
 -   [Where is my bash profile](https://www.codecademy.com/courses/learn-the-command-line/lessons/learn-command-line-environment/exercises/configuring-environment-bash-profile)

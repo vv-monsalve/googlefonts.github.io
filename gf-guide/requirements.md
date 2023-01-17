@@ -19,9 +19,7 @@ For specific information on any of those cases, please read the pages with the r
     <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./onboarding" style="font-weight:bold">Adding & upgrading fonts to Google Fonts</a> 
     <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./static" style="font-weight:bold">Static fonts specifics</a>
-    <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./production" style="font-weight:bold">Production requirements</a>
 </div>
 
 ## Table of contents
@@ -145,7 +143,7 @@ We require the post table `isFixedPitch` to be set and the OS/2 `panose` tab
 
 Developers can set these automatically by using the following gftools command: `gftools fix-isfixedpitch`
 
-## Glyphsets
+## Glyph Sets
 
 [GF Glyphsets](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets) provides the glyph set definition standards that Google Fonts fonts must adhere to.
 
@@ -162,7 +160,7 @@ Currently, the most used ones are:
 
 Find all the glyphsets definition and filter lists in the [Glyphsets repository](https://github.com/googlefonts/glyphsets/tree/main/GF_glyphsets). Be aware that these glyphsets are still a work in progress and any advise or recommendation can be submitted using the [Glyphsets’ issue tracker](https://github.com/googlefonts/glyphsets/issues).
 
-## Open Type features support
+## OpenType features support
 
 The Google Fonts API currently does not support the inclusion of OpenType features such as Stylistic Sets (`salt`) or Small Caps (`smcp`, `c2sc`). Fonts that absolutely need them will need to be published as a separate family with the following schema:
 
@@ -186,8 +184,9 @@ The vertical metrics should be the same in each sibling family, and the Use of T
 
 <div class="next-reading">
     Further reading:<br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./statics" style="font-weight:bold">Static fonts specifics</a>
+    <br>
+    <mark class="green"><b>must&rarr;</b></mark> <a href="./variable" style="font-weight:bold">Variable fonts specifics</a>
+    <br>
     <mark class="green"><b>must&rarr;</b></mark> <a href="./metrics" style="font-weight:bold">Vertical metrics</a>
-    <br>
-    <mark class="green"><b>must&rarr;</b></mark> <a href="./production" style="font-weight:bold">Production requirements</a>
-    <br>
 </div>
